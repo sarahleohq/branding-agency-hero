@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", sans-serif;
+}
+
+@keyframes softGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 21, 0, 0.15);
+    border-color: rgba(255, 21, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(255, 21, 0, 0.4);
+    border-color: rgba(255, 21, 0, 0.7);
+  }
+}
+
+@keyframes softWhiteGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.animate-glow-red {
+  animation: softGlowPulse 4s infinite ease-in-out;
+}
+
+.animate-glow-white {
+  animation: softWhiteGlowPulse 4s infinite ease-in-out;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
