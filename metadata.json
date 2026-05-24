@@ -1,0 +1,6 @@
+{
+  "name": "Branding Agency Hero",
+  "description": "A polished state-of-the-art dark themed hero landing page for a high-end creative branding agency.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
